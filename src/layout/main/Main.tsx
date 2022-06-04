@@ -11,7 +11,5 @@ export const Main = (): JSX.Element => {
       <Header></Header>
       <GlobalProvider>{<RouteWithSubRoutes routes={routes} />}</GlobalProvider>
     </>
-
-    // Add footer here
   );
 };

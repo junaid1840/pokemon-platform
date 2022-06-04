@@ -19,6 +19,8 @@
 .nav-list-item {
   margin: 0 0.5rem;
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 }
 
 .nav-list-item:hover {

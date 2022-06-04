@@ -20,10 +20,8 @@ export const Home: FC = () => {
 
   return (
     <>
-      <h1>Home</h1>
-      {showLoader && <h1>Show Loader</h1>}
-      <button onClick={successCall}>Go Success</button>
-      <button onClick={failureCall}>Go Error</button>
+      <h1>Welcome to Pokemon platform</h1>
+      <p>Here you can checkout details about pokemon and add them</p>
     </>
   );
 };
