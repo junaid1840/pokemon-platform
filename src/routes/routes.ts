@@ -24,7 +24,7 @@ export const routes: iRoutes[] = [
     component: MyPokemon,
   },
   {
-    path: POKEMON_DETAILS,
+    path: POKEMON_DETAILS(),
     exact: true,
     component: PokemonDetails,
   },
