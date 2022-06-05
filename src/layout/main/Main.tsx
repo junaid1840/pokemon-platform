@@ -8,8 +8,12 @@ import { Header } from "../../component/header/Header";
 export const Main = (): JSX.Element => {
   return (
     <>
-      <Header></Header>
-      <GlobalProvider>{<RouteWithSubRoutes routes={routes} />}</GlobalProvider>
+      <Header />
+      <GlobalProvider>
+        <div className="wrapper">
+          <RouteWithSubRoutes routes={routes} />
+        </div>
+      </GlobalProvider>
     </>
   );
 };
