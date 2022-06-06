@@ -1,14 +1,21 @@
 import {
   IPokemonStateType,
+  ADD_IN_MY_POKEMON_LIST,
+  POKEMON_DETAILS,
   POKEMON_LIST,
   POKEMON_LIST_OFFSET,
   pokemonActionTypes,
 } from "../../types/book/pokemonType";
-import { IPokemonListOffset } from "../../interfaces/pokemon/pokemonInterfaces";
+import {
+  IPokemonDetails,
+  IPokemonListOffset,
+} from "../../interfaces/pokemon/pokemonInterfaces";
 
 const initialPokemonState: IPokemonStateType = {
   pokemonList: [],
   pokemonListOffset: {} as IPokemonListOffset,
+  pokemonDetails: {} as IPokemonDetails,
+  myPokemonList: {} as Record<number, IPokemonDetails>,
 };
 
 export const pokemonReducer = (
@@ -25,6 +32,18 @@ export const pokemonReducer = (
       return {
         ...state,
         pokemonListOffset: action.payload,
+      };
+    case POKEMON_DETAILS:
+      return {
+        ...state,
+        pokemonDetails: action.payload,
+      };
+    case ADD_IN_MY_POKEMON_LIST:
+      return {
+        ...state,
+        myPokemonList: {
+          [action.payload.id]: action.payload,
+        },
       };
     default:
       return state;
