@@ -19,9 +19,9 @@ export const MyPokemonCard: FC<IMyPokemonDetails> = ({
     <div className="my-pokemon-details">
       <img className="pokemon-thumbnail" src={sprites[0]} alt="pokemon-image" />
       <div className="vertical-divider"></div>
-      <span>{nickName}</span>
+      <span className="pokemon-name">{nickName}</span>
       <div className="vertical-divider"></div>
-      <span>{name}</span>
+      <span className="pokemon-name">{name}</span>
       <div className="vertical-divider"></div>
       <div className="my-pokemon-action-wrapper">
         <Button className="btn release-pokemon-btn" onClick={releasePokemon}>
