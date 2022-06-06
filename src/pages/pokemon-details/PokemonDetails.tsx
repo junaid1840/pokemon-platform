@@ -1,25 +1,13 @@
-import React, { FC, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { FC } from "react";
+import { useSelector } from "react-redux";
 import { AppState } from "../../redux/store";
 import "./pokemonDetails.scss";
-import { useParams } from "react-router-dom";
-import { getPokemonDetails } from "../../redux/effects/pokemon-effects/pokemonEffects";
 import { CatchPokemon } from "./catchPokemon/CatchPokemon";
 
-type IPokemonDetailsParam = {
-  id: string;
-};
-
 export const PokemonDetails: FC = () => {
-  const dispatch = useDispatch();
-  const params = useParams<IPokemonDetailsParam>();
   const { pokemonDetails } = useSelector(
     (state: AppState) => state.pokemonReducer
   );
-
-  useEffect(() => {
-    dispatch(getPokemonDetails(params.id));
-  }, []);
 
   return (
     <>
