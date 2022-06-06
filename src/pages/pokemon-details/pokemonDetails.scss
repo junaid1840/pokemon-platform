@@ -1,5 +1,8 @@
 @import "./src/assets/scss/variables";
 
+.pokemon-name-heading {
+  margin-bottom: 0;
+}
 .pokemon-details-wrapper {
   display: flex;
   justify-content: space-around;
@@ -9,6 +12,12 @@
 .pokemon-details {
   display: flex;
   justify-content: space-between;
+}
+.pokemon-moves {
+  margin: 0.3em;
+}
+.pokemon-types {
+  margin: 0.3em;
 }
 .pokemon-list-items-wrapper {
   max-height: 280px;
@@ -30,6 +39,23 @@
   height: 30px;
   border: 1px solid $blue;
   font-size: 1.2rem;
+}
+.pokemon-actions {
+  margin: 20px 0;
+}
+.caught-label {
+  text-align: center;
+  text-decoration: none;
+  background: $pokemon-gradient;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.caught-label:hover {
+  background: red;
 }
 
 

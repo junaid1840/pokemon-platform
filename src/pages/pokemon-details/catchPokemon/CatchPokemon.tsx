@@ -5,9 +5,12 @@ import { addInMyPokemonListAction } from "../../../redux/actions/book/pokemonAct
 import { useDispatch, useSelector } from "react-redux";
 import { AppState } from "../../../redux/store";
 import "./catchPokemon.scss";
+import { useHistory } from "react-router-dom";
+import { ROUTES } from "../../../routes/routeConstants";
 
 export const CatchPokemon: FC = () => {
   const dispatch = useDispatch();
+  const history = useHistory();
   const [showModal, setShowModal] = useState(false);
   const { pokemonDetails } = useSelector(
     (state: AppState) => state.pokemonReducer
@@ -17,13 +20,14 @@ export const CatchPokemon: FC = () => {
   const catchPokemon = () => {
     dispatch(addInMyPokemonListAction({ nickName, ...pokemonDetails }));
     setShowModal(false);
+    history.push(ROUTES.MY_POKEMON);
   };
   const closeModal = () => setShowModal(false);
   const triggerPokemonCatch = () => setShowModal(true);
   return (
     <>
-      <Button className="btn pokemon-catch-btn" onClick={triggerPokemonCatch}>
-        Catch Pokemon
+      <Button className="btn" onClick={triggerPokemonCatch}>
+        Initiate Pokemon Catch
       </Button>
       <Modal isOpen={showModal}>
         <div className="catch-pokemon-modal">

@@ -24,7 +24,7 @@ export const PokemonList: FC = () => {
 
   return (
     <>
-      <div className="pokemon-list">
+      <div className="pokemon-list wrapper">
         <h1>All Pokemon List</h1>
         {pokemonList.map((pokemonItem, index) => (
           <PokemonCard key={`pokemon-card-${index}`} {...pokemonItem} />

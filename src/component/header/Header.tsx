@@ -21,7 +21,7 @@ export const Header: FC = () => {
           </li>
           <li>
             <Link className="nav-list-item" to={ROUTES.MY_POKEMON}>
-              My Pokemon
+              My Pokemons
             </Link>
           </li>
         </ul>

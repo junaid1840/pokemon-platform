@@ -3,16 +3,18 @@ import { useSelector } from "react-redux";
 import { AppState } from "../../redux/store";
 import "./pokemonDetails.scss";
 import { CatchPokemon } from "./catchPokemon/CatchPokemon";
+import { Link } from "react-router-dom";
+import { ROUTES } from "../../routes/routeConstants";
 
 export const PokemonDetails: FC = () => {
-  const { pokemonDetails } = useSelector(
+  const { pokemonDetails, myPokemonList } = useSelector(
     (state: AppState) => state.pokemonReducer
   );
 
   return (
     <>
       {pokemonDetails.sprites && (
-        <div className="pokemon-details-wrapper">
+        <div className="pokemon-details-wrapper wrapper">
           <div className="pokemon-image-wrapper">
             {pokemonDetails.sprites.map((imageUrl, index) => (
               <img
@@ -24,10 +26,13 @@ export const PokemonDetails: FC = () => {
             ))}
           </div>
           <div className="pokemon-details-section">
-            <h1>{pokemonDetails.name.toUpperCase()}</h1>
+            <h1 className="pokemon-name-heading">
+              {pokemonDetails.name.toUpperCase()}
+            </h1>
             <div className="pokemon-details">
               <div className="pokemon-moves">
                 <h3 className="sub-heading">Moves</h3>
+                <hr />
                 <div className="pokemon-list-items-wrapper">
                   {pokemonDetails.moves.map((move, index) => (
                     <div key={`pokemon-move-${index}`}>{move.move.name}</div>
@@ -36,6 +41,7 @@ export const PokemonDetails: FC = () => {
               </div>
               <div className="pokemon-types">
                 <h3 className="sub-heading">Types</h3>
+                <hr />
                 <div className="pokemon-list-items-wrapper">
                   {pokemonDetails.types.map((type, index) => (
                     <div key={`pokemon-type-${index}`}>{type.type.name}</div>
@@ -45,7 +51,13 @@ export const PokemonDetails: FC = () => {
             </div>
             <hr />
             <div className="pokemon-actions">
-              <CatchPokemon />
+              {myPokemonList[pokemonDetails.id] ? (
+                <Link className="caught-label" to={ROUTES.MY_POKEMON}>
+                  Already in the Pack
+                </Link>
+              ) : (
+                <CatchPokemon />
+              )}
             </div>
           </div>
         </div>

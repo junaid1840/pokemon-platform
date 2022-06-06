@@ -10,9 +10,7 @@ export const Main = (): JSX.Element => {
     <>
       <Header />
       <GlobalProvider>
-        <div className="wrapper">
-          <RouteWithSubRoutes routes={routes} />
-        </div>
+        <RouteWithSubRoutes routes={routes} />
       </GlobalProvider>
     </>
   );
