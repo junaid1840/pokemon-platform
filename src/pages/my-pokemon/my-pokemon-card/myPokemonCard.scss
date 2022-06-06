@@ -1,0 +1,11 @@
+@import "./src/assets/scss/variables";
+
+.my-pokemon-details {
+  display: flex;
+  align-items: center;
+}
+.pokemon-thumbnail {
+  width: 100px;
+  height: 100px;
+  border: 1px dot-dash $blue;
+}

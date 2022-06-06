@@ -7,6 +7,8 @@ import {
   POKEMON_DETAILS,
   POKEMON_LIST,
   POKEMON_LIST_OFFSET,
+  REMOVE_FROM_MY_POKEMON_LIST,
+  IRemoveFromMyPokemonListActionType,
 } from "../../types/book/pokemonType";
 import {
   IPokemon,
@@ -40,4 +42,11 @@ export const addInMyPokemonListAction = (
 ): IAddInMyPokemonListActionType => ({
   type: ADD_IN_MY_POKEMON_LIST,
   payload: pokemon,
+});
+
+export const releaseFromMyPokemonListAction = (
+  pokemonId: number
+): IRemoveFromMyPokemonListActionType => ({
+  type: REMOVE_FROM_MY_POKEMON_LIST,
+  payload: pokemonId,
 });

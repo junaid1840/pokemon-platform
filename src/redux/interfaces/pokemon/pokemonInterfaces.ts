@@ -14,10 +14,14 @@ interface IType {
   slot: number;
   type: IPokemon;
 }
+
 export interface IPokemonDetails {
   id: number;
   name: string;
   sprites: string[];
   moves: IMove[];
   types: IType[];
+}
+export interface IMyPokemonDetails extends IPokemonDetails {
+  nickname: string;
 }

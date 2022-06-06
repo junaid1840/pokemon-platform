@@ -8,6 +8,7 @@ export const POKEMON_LIST = "POKEMON_LIST";
 export const POKEMON_LIST_OFFSET = "POKEMON_LIST_OFFSET";
 export const POKEMON_DETAILS = "POKEMON_DETAILS";
 export const ADD_IN_MY_POKEMON_LIST = "ADD_IN_MY_POKEMON_LIST";
+export const REMOVE_FROM_MY_POKEMON_LIST = "REMOVE_FROM_MY_POKEMON_LIST";
 
 export interface IPokemonStateType {
   pokemonList: IPokemon[];
@@ -32,9 +33,14 @@ export interface IAddInMyPokemonListActionType {
   type: typeof ADD_IN_MY_POKEMON_LIST;
   payload: IPokemonDetails;
 }
+export interface IRemoveFromMyPokemonListActionType {
+  type: typeof REMOVE_FROM_MY_POKEMON_LIST;
+  payload: number;
+}
 
 export type pokemonActionTypes =
   | IPokemonListActionType
   | IPokemonListOffsetActionType
   | IPokemonDetailsActionType
-  | IAddInMyPokemonListActionType;
+  | IAddInMyPokemonListActionType
+  | IRemoveFromMyPokemonListActionType;
