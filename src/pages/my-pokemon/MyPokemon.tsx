@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import { useSelector } from "react-redux";
 import { AppState } from "../../redux/store";
 import { MyPokemonCard } from "./my-pokemon-card/MyPokemonCard";
+import "./myPokemon.scss";
 
 export const MyPokemon: FC = () => {
   const { myPokemonList } = useSelector(
@@ -9,7 +10,7 @@ export const MyPokemon: FC = () => {
   );
 
   return (
-    <div>
+    <div className="my-pokemon-list-wrapper">
       <h1>My Pokemon List</h1>
       {Object.values(myPokemonList).map((pokemonItem, index) => (
         <MyPokemonCard key={`pokemon-card-${index}`} {...pokemonItem} />

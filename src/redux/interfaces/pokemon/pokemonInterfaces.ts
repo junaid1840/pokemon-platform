@@ -23,5 +23,5 @@ export interface IPokemonDetails {
   types: IType[];
 }
 export interface IMyPokemonDetails extends IPokemonDetails {
-  nickname: string;
+  nickName: string;
 }

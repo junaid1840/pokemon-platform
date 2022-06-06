@@ -8,6 +8,7 @@ import {
   REMOVE_FROM_MY_POKEMON_LIST,
 } from "../../types/book/pokemonType";
 import {
+  IMyPokemonDetails,
   IPokemonDetails,
   IPokemonListOffset,
 } from "../../interfaces/pokemon/pokemonInterfaces";
@@ -16,7 +17,7 @@ const initialPokemonState: IPokemonStateType = {
   pokemonList: [],
   pokemonListOffset: {} as IPokemonListOffset,
   pokemonDetails: {} as IPokemonDetails,
-  myPokemonList: {} as Record<number, IPokemonDetails>,
+  myPokemonList: {} as Record<number, IMyPokemonDetails>,
 };
 
 export const pokemonReducer = (

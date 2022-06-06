@@ -1,4 +1,5 @@
 import {
+  IMyPokemonDetails,
   IPokemon,
   IPokemonDetails,
   IPokemonListOffset,
@@ -14,7 +15,7 @@ export interface IPokemonStateType {
   pokemonList: IPokemon[];
   pokemonListOffset: IPokemonListOffset;
   pokemonDetails: IPokemonDetails;
-  myPokemonList: Record<number, IPokemonDetails>;
+  myPokemonList: Record<number, IMyPokemonDetails>;
 }
 
 export interface IPokemonListActionType {
@@ -31,7 +32,7 @@ export interface IPokemonDetailsActionType {
 }
 export interface IAddInMyPokemonListActionType {
   type: typeof ADD_IN_MY_POKEMON_LIST;
-  payload: IPokemonDetails;
+  payload: IMyPokemonDetails;
 }
 export interface IRemoveFromMyPokemonListActionType {
   type: typeof REMOVE_FROM_MY_POKEMON_LIST;
