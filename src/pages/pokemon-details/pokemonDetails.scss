@@ -1,0 +1,26 @@
+@import "./src/assets/scss/variables";
+
+.pokemon-details-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pokemon-details {
+  display: flex;
+  max-height: 400px;
+}
+.pokemon-details > * {
+  overflow: scroll;
+}
+.pokemon-catch-btn {
+  margin: 2em 0 ;
+}
+
+
+@media screen and (max-width: $max-width-sm) {
+  .pokemon-details-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
