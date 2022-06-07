@@ -35,6 +35,7 @@ export const CatchPokemon: FC = () => {
           <div>
             <input
               placeholder="Give me a name..."
+              data-testid="pokemon-nickname-input"
               className="pokemon-nickname-input"
               onChange={(e) => setNickName(e.target.value)}
               required={true}
