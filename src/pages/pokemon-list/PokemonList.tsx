@@ -14,7 +14,6 @@ export const PokemonList: FC = () => {
 
   useEffect(() => {
     dispatch(getPokemonListEffect("limit=20&offset=20"));
-    console.log(pokemonList);
   }, []);
 
   const getNextList = () =>

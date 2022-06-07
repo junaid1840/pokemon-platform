@@ -10,7 +10,6 @@ let failedApiQueue: {
 }[] = [];
 
 const refreshTokenAction = (): iApiResponse => {
-  console.log("Perform Refresh Token Action");
   return {} as iApiResponse;
 };
 

@@ -37,7 +37,6 @@ export const getPokemonDetails =
   (pokemonId: string) =>
   async (dispatch: Dispatch<IPokemonDetailsActionType>): Promise<void> => {
     const data = await getPokemonDetailsService(pokemonId);
-    console.log(data.sprites);
     const formattedData: IPokemonDetails = {
       ...data,
       sprites: [data.sprites.other["official-artwork"].front_default],
