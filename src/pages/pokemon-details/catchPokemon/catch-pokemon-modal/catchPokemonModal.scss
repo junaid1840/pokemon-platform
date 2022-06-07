@@ -1,0 +1,21 @@
+@import "../../../../assets/scss/variables";
+
+.cancel-btn {
+  background: #c62727;
+  margin-left: 50px;
+}
+.cancel-btn:hover {
+  background: red;
+}
+
+
+@media screen and (max-width: $max-width-sm) {
+  .cancel-btn {
+    margin: 0;
+  }
+  .catch-pokemon-action {
+    display: flex;
+    flex-direction: column;
+    margin: 0 25%;
+  }
+}

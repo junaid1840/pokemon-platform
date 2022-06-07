@@ -1,0 +1,43 @@
+@import "./src/assets/scss/variables";
+
+.my-pokemon-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid $blue;
+}
+
+.pokemon-thumbnail {
+  width: 100px;
+  height: 100px;
+  border: 1px dot-dash $blue;
+}
+
+.vertical-divider {
+  border-left: 3px solid $blue;
+  height: 40px;
+  border-radius: 10px;
+}
+.release-pokemon-btn {
+  margin-right: 5px;
+  background: $pokemon-gradient;
+}
+.pokemon-name {
+  flex-basis: 15%;
+}
+
+@media screen and (max-width: $max-width-sm) {
+  .my-pokemon-details {
+    flex-direction: column;
+    margin: 0 0.2em;
+  }
+  .vertical-divider {
+    border-top: 3px solid $blue;
+    width: 80px;
+    height: 0;
+    margin: 0.5em;
+  }
+  .my-pokemon-action-wrapper {
+    margin: 0 0 0.5em;
+  }
+}

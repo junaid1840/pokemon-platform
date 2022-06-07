@@ -1,3 +1,16 @@
+@import "./src/assets/scss/variables";
+
 .App {
   text-align: center;
 }
+
+.wrapper {
+  padding: 0 5rem;
+}
+
+@media screen and (max-width: $max-width-sm) {
+  .wrapper {
+    padding: 0 0.1rem;
+  }
+}
+
