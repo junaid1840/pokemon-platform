@@ -9,17 +9,17 @@ export const Header: FC = () => {
       <div className="logo">Pokemon Platform</div>
       <nav>
         <ul className="nav-list-wrapper">
-          <li>
+          <li className="nav-list-item-wrapper">
             <Link className="nav-list-item" to={ROUTES.HOME_PAGE}>
               Home
             </Link>
           </li>
-          <li>
+          <li className="nav-list-item-wrapper">
             <Link className="nav-list-item" to={ROUTES.POKEMON_LIST}>
               Pokemon List
             </Link>
           </li>
-          <li>
+          <li className="nav-list-item-wrapper">
             <Link className="nav-list-item" to={ROUTES.MY_POKEMON}>
               My Pokemons
             </Link>
