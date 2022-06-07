@@ -4,7 +4,7 @@ import "./modal.scss";
 
 export const Modal: FC<ReactModal.Props> = ({ children, ...props }) => {
   useEffect(() => {
-    ReactModal.setAppElement("#root");
+    ReactModal.setAppElement(".modal");
   });
   return (
     <ReactModal {...props} overlayClassName="modal">

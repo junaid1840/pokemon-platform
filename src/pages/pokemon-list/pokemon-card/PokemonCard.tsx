@@ -6,25 +6,22 @@ import "./pokemonCard.scss";
 import { ROUTES } from "../../../routes/routeConstants";
 import { getPokemonDetails } from "../../../redux/effects/pokemon-effects/pokemonEffects";
 import { useDispatch } from "react-redux";
+import { getPokemonIdFromUrl } from "../../../utils/commonUtils";
 
 type IProps = IPokemon;
 
 export const PokemonCard: FC<IProps> = ({ name, url }) => {
   const dispatch = useDispatch();
   const history = useHistory();
-  const getPokemonId = (url: string): string => {
-    const urlSplitArray = url.split("/");
-    return urlSplitArray[urlSplitArray.length - 2];
-  };
 
   const goToDetails = () => {
-    const pokemonId = getPokemonId(url);
+    const pokemonId = getPokemonIdFromUrl(url);
     dispatch(getPokemonDetails(pokemonId));
     history.push(ROUTES.POKEMON_DETAILS(pokemonId));
   };
 
   return (
-    <div className="card-wrapper">
+    <div className="card-wrapper" data-testid={`pokemon-card-${name}`}>
       <h1 className="card-title">{name.toUpperCase()}</h1>
       <Button className="btn redirect-details" onClick={goToDetails}>
         Details

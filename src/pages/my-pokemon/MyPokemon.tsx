@@ -10,7 +10,10 @@ export const MyPokemon: FC = () => {
   );
 
   return (
-    <div className="wrapper my-pokemon-list-wrapper">
+    <div
+      className="wrapper my-pokemon-list-wrapper"
+      data-testid="my-pokemon-list"
+    >
       <h1>My Pokemon List</h1>
       {Object.values(myPokemonList).map((pokemonItem, index) => (
         <MyPokemonCard key={`pokemon-card-${index}`} {...pokemonItem} />
