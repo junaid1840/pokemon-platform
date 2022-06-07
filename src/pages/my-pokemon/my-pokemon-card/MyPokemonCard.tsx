@@ -16,7 +16,10 @@ export const MyPokemonCard: FC<IMyPokemonDetails> = ({
   const dispatch = useDispatch();
   const releasePokemon = () => dispatch(releaseFromMyPokemonListAction(id));
   return (
-    <div className="my-pokemon-details">
+    <div
+      className="my-pokemon-details"
+      data-testid={`my-pokemon-details-${id}`}
+    >
       <img className="pokemon-thumbnail" src={sprites[0]} alt="pokemon-image" />
       <div className="vertical-divider"></div>
       <span className="pokemon-name">{nickName}</span>

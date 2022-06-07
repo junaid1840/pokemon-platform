@@ -13,7 +13,7 @@ import {
   IPokemonListOffset,
 } from "../../interfaces/pokemon/pokemonInterfaces";
 
-const initialPokemonState: IPokemonStateType = {
+export const initialPokemonState: IPokemonStateType = {
   pokemonList: [],
   pokemonListOffset: {} as IPokemonListOffset,
   pokemonDetails: {} as IPokemonDetails,
