@@ -78,7 +78,6 @@
     "jest-environment-jsdom": "^28.1.0",
     "prettier": "2.3.2",
     "react-redux": "^7.2.5",
-    "react-test-renderer": "^18.1.0",
     "redux": "^4.1.1",
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.3.0",
